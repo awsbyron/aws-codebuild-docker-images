@@ -2,6 +2,7 @@ version: 0.2
 
 phases:
   build:
+    on-failure: ABORT
     commands:
       - cd $CODEBUILD_SRC_DIR/ubuntu/standard/7.0
       - docker build -t aws/codebuild/standard:7.0 .
